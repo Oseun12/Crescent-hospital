@@ -52,10 +52,8 @@ function Hero() {
                         <h2 className="text-3xl font-bold sm:text-4xl">Welcome to <span className=''> A-Crescent </span>  Medical Center </h2>
 
                         <p className="mt-4 text-gray-600">
-                       aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                       aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                       aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafffffffffffffffffffffffffffffffffff
-                       ffffffffffffffffffffffffffffffffffffffffffffffffffffff.
+                       Welcome to our prestigious Medical Center.. weeeeee havveeeeee moooereeeee tooooo offfeeerrrrrrr Welcome to our prestigious Medical Center.. weeeeee havveeeeee moooereeeee tooooo offfeeerrrrrrr                        Welcome to our prestigious Medical Center.. weeeeee havveeeeee moooereeeee tooooo offfeeerrrrrrr
+
                         </p>
 
                         <Button className='mt-10 bg-cyan-900'>
