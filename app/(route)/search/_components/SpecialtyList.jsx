@@ -45,7 +45,7 @@ function SpecialtyList() {
                 <CommandEmpty>No results found.</CommandEmpty>
                 <CommandGroup heading="Specialty" className=''  >
                     {specialties&&specialties.map((item, index) => (
-                <CommandItem>
+                <CommandItem key={index}>
                     <Link href={''} className='p-3 text-[14px]   cursor-pointer w-full hover:bg-cyan-900 hover:text-white rounded-xl'>
                     
                     <label>

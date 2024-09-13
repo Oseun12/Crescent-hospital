@@ -5,7 +5,7 @@ function layout({ children }) {
   return (
     <div className='grid grid-cols-4'>
         <div>
-            <SpecialtyList/>
+            <SpecialtyList />
         </div>
         <div className='col-span-3'>
             { children }
