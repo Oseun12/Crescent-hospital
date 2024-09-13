@@ -44,7 +44,7 @@ function DoctorList() {
     );
   }
 
-  if (error) return <p>Error: {error}</p>;
+  // if (error) return <p>Error: {error}</p>;
 
   return (
     <div className="mt-10">
