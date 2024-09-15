@@ -32,7 +32,8 @@ const DoctorSchema = new mongoose.Schema({
   },
   specialty: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Specialty'
+    ref: 'Specialty',
+    required: true
   },
   location: {
     type: String,
@@ -47,8 +48,5 @@ const DoctorSchema = new mongoose.Schema({
   ],
 }, { timestamps: true });
 
-// console.log(mongoose.models) 
-// console.log(DoctorSchema); 
-// console.log(mongoose.models.Doctor); 
 
 module.exports = mongoose.models.Doctor || mongoose.model('Doctor', DoctorSchema);

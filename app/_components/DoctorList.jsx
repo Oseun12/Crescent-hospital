@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
 
-function DoctorList() {
+function DoctorList({ heading='Our Heroes' }) {
   const [doctors, setDoctors] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -48,19 +48,19 @@ function DoctorList() {
 
   return (
     <div className="mt-10">
-      <h1 className="mb-10 text-4xl font-bold text-center">Our Heroes</h1>
+      <h1 className="mb-10 text-4xl font-bold text-center">{heading}</h1>
       
-      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 cursor-pointer hover:border-blue-400 hover:shadow-lg transition-all ease-in-out">
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6   px-4 transition-all ease-in-out">
         {doctors.length > 0 ? (
           doctors.map(doctor => (
             <li key={doctor._id}>
-              <div className="border-[2px] p-4 rounded-lg">
+              <div className="border-[2px] border-gray-300 p-4 rounded-lg shadow-none hover:shadow-lg hover:scale-105 cursor-pointer hover:border-cyan-400 transition-all duration-300 ease-in-out">
                 <Image 
                   src={doctor.imageUrl} 
                   alt={doctor.name} 
                   width={500} 
                   height={100}
-                  className="h-[300px] w-full object-cover" 
+                  className="h-[300px] w-full object-cover " 
                 />
                 <h2 className="text-[20px] p-1 rounded-full px-2 font-bold text-cyan-600">{doctor.name}</h2>
                 <p className="text-[20px] p-1 rounded-full px-2 font-bold">{doctor.specialty ? doctor.specialty.specialty : 'Specialty not available'}</p>

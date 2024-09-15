@@ -89,9 +89,9 @@ function Search() {
                   <li
                     key={doctor._id}
                     className="p-3 hover:bg-gray-100 cursor-pointer flex justify-between"
-                    onClick={() => handleSpecialtySelect(doctor.specialty) } 
+                    onClick={() => handleSpecialtySelect(doctor?.specialty) } 
                   >
-                    {doctor.specialty}  
+                    {doctor?.specialty}  
                   </li>
                 ))
                 

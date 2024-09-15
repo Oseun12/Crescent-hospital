@@ -13,12 +13,15 @@ import {
     CommandShortcut,
   } from "@/components/ui/command"
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
   
 
 function SpecialtyList() {
 
     const [specialties, setSpecialties] = useState([]);
+    const params = usePathname();
+    const specialty = params.split('/')[2]
 
   useEffect(() => {
     const fetchSpecialties = async () => {
@@ -44,9 +47,9 @@ function SpecialtyList() {
             <CommandList className='overflow-visible'>
                 <CommandEmpty>No results found.</CommandEmpty>
                 <CommandGroup heading="Specialty" className=''  >
-                    {specialties&&specialties.map((item, index) => (
+                    {specialties && specialties.map((item, index) => (
                 <CommandItem key={index}>
-                    <Link href={''} className='p-3 text-[14px]   cursor-pointer w-full hover:bg-cyan-900 hover:text-white rounded-xl'>
+                    <Link href={`/search/${item?.specialty}`} className={`p-3 text-[14px] items-center  cursor-pointer w-full hover:bg-cyan-900 hover:text-white rounded-xl ${specialty==item.specialty&&'bg-cyan-200'}`}>
                     
                     <label>
                         {item.specialty}
